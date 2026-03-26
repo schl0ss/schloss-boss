@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Building a Churn Prediction Model from Zero | SCHLOSS-BOSS",
   description:
-    "How I built an end-to-end churn prediction system at ExtraHop — from zero predictive capability to a deployed Gradient Boosting model with 0.92 AUC.",
+    "How I built an end-to-end churn prediction system — from zero predictive capability to a deployed Gradient Boosting model with 0.92 AUC.",
 };
 
 export default function ChurnModelPost() {
@@ -17,46 +17,45 @@ export default function ChurnModelPost() {
           Building a Churn Prediction Model from Zero
         </h1>
         <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
-          How I took Customer Success at ExtraHop from zero predictive
-          capability to proactive intervention with a deployed ML pipeline.
+          How I took a Customer Success team from zero predictive capability
+          to proactive intervention with a deployed ML pipeline.
         </p>
       </header>
 
       <h2>The Problem</h2>
       <p>
-        Customer Success at ExtraHop had <strong>zero predictive capability</strong>.
-        CS reps were completely reactive. By the time they knew a customer was
-        at risk of not renewing, it was too late to intervene. There was no
-        prior predictive infrastructure in place.
+        I was working at a PE-backed SaaS company where the Customer Success
+        team had <strong>zero predictive capability</strong>. CS reps were
+        completely reactive. By the time they knew a customer was at risk of
+        not renewing, it was too late to intervene. There was no prior
+        predictive infrastructure in place.
       </p>
       <p>
-        In a PE-backed environment (Bain Capital and CrossPoint Capital),
-        ARR (Annual Recurring Revenue) is the primary success metric. Every
-        churned customer is a direct hit to ARR, which drives valuation
-        multiples. This wasn&apos;t just a data science project — it was
-        directly protecting the metric that determines enterprise value.
+        Under private equity ownership, ARR (Annual Recurring Revenue) is the
+        primary success metric. Every churned customer is a direct hit to ARR,
+        which drives valuation multiples. This wasn&apos;t just a data science
+        project — it was directly protecting the metric that determines
+        enterprise value.
       </p>
 
       <h2>The Data Pipeline</h2>
       <p>
-        I built a Snowflake table called <code>ANALYSIS_CHURN</code> that
-        combined two event types:
+        I built a Snowflake table that combined two event types:
       </p>
       <ul>
         <li>
-          <strong>Renewals</strong> from the Opportunity object
-          (Business Type = &apos;Renewal&apos;, Status = &apos;Won&apos;)
+          <strong>Renewals</strong> from the CRM (won renewal opportunities)
         </li>
         <li>
-          <strong>Churns</strong> from the Account object (Date of Customer
-          Loss field)
+          <strong>Churns</strong> from customer account records (date of
+          customer loss)
         </li>
       </ul>
       <p>
         Filtered to events from 2022 onward, then generated five timeframes
         for each event: at event, 1 month before, 3 months before, 6 months
         before, and 1 year before. Each timeframe was joined to the closest
-        Gainsight customer health score by date using a ranked join.
+        customer health score by date using a ranked join.
       </p>
       <p>
         The feature engineering wasn&apos;t just about capturing a single
@@ -180,7 +179,7 @@ export default function ChurnModelPost() {
         risk tiers and recommended actions. It went all the way to
         prescriptive — specific accounts with recommended next actions for the
         CS team. This wasn&apos;t a model that sat in a notebook. It was a
-        tool the CS team used daily.
+        tool the CS team used daily for over a year.
       </p>
       <blockquote>
         <p>
@@ -189,15 +188,15 @@ export default function ChurnModelPost() {
           customers!&quot;
         </p>
         <footer className="text-sm not-italic text-[var(--color-text-muted)] mt-2">
-          — Bradley Molinaro, Direct Manager
+          — Direct Manager
         </footer>
       </blockquote>
 
       <h2>What I&apos;d Do Next</h2>
       <p>
-        Expand the feature set beyond just Gainsight health score: product
-        usage data, support ticket volume and sentiment (I built the sentiment
-        pipeline separately using Snowflake Cortex), contract value, number of
+        Expand the feature set beyond just the health score: product usage
+        data, support ticket volume and sentiment (I built a separate NLP
+        pipeline for ticket classification), contract value, number of
         integrations, time since last login.
       </p>
       <p>

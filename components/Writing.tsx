@@ -6,7 +6,7 @@ const POSTS = [
     slug: "/blog/churn-model",
     date: "2025",
     description:
-      "End-to-end ML pipeline at ExtraHop — from zero predictive capability to a deployed Gradient Boosting model with 0.92 AUC.",
+      "End-to-end ML pipeline at a PE-backed SaaS company — from zero predictive capability to a deployed Gradient Boosting model with 0.92 AUC.",
   },
   {
     title: "What I've Learned from 200+ Hours of Claude Code",
@@ -14,6 +14,13 @@ const POSTS = [
     date: "2026",
     description:
       "Skills, plugins, agentic workflows, and MCP — how a CLI-based AI coding assistant changed the way I build software.",
+  },
+  {
+    title: "Teaching AP Stats with an AI Copilot",
+    slug: "/blog/ap-stats-skill",
+    date: "2026",
+    description:
+      "How I turned 13 years of AP Statistics teaching notes into a Claude Code skill that walks through inference problems using the 4C Method.",
   },
 ];
 
