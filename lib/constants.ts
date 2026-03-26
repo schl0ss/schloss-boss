@@ -4,7 +4,7 @@ export const SITE = {
   fullName: "Matt Schlosser",
   url: "https://schloss-boss.ai",
   description:
-    "AI engineer using cutting-edge AI to disrupt Big Tech's takeover of our lives. Specializing in Claude Code, prompt engineering, and 100x techniques.",
+    "Business Intelligence & Machine Learning Engineer leveraging Snowflake, dbt, and GenAI to transform business insights. Pioneer in AI-accelerated development using Claude Code to ship real products at speed.",
 } as const;
 
 export const LINKS = {
@@ -15,6 +15,9 @@ export const LINKS = {
 
 export const NAV_ITEMS = [
   { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
+  { label: "Data Science", href: "#data-science" },
   { label: "Contact", href: "#contact" },
 ] as const;

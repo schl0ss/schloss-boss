@@ -2,13 +2,21 @@ import SectionHeading from "./SectionHeading";
 
 const SKILLS = [
   {
-    category: "AI Engineering",
-    items: "Claude Code, Prompt Engineering, Agentic Workflows, MCP",
+    category: "Primary Stack",
+    items: "Snowflake, dbt, Tableau, Google Colab, Fivetran",
   },
   {
-    category: "100x Techniques",
+    category: "ML / AI",
     items:
-      "AI-Assisted Development, Rapid Prototyping, Automated Pipelines",
+      "LLMs/NLP, Sentiment Analysis, Predictive Modeling, Prompt Engineering",
+  },
+  {
+    category: "AI Tools",
+    items: "Claude Code (200+ hours), Google Gemini, Cursor",
+  },
+  {
+    category: "Languages",
+    items: "Python, SQL, R",
   },
   {
     category: "Full Stack",
@@ -17,6 +25,10 @@ const SKILLS = [
   {
     category: "Infrastructure",
     items: "Vercel, Firebase, GitHub Actions, CI/CD",
+  },
+  {
+    category: "Other",
+    items: "Jira, Salesforce, GitHub, Google Workspace",
   },
 ];
 
@@ -28,9 +40,11 @@ export default function About() {
     >
       <SectionHeading>About</SectionHeading>
       <p className="text-[var(--color-text-secondary)] leading-relaxed mb-10 max-w-2xl">
-        I build with AI, not just about AI. Shipping real products at speed,
-        leveraging Claude Code and modern tooling to deliver what used to take
-        teams of ten.
+        Proven track record delivering ML solutions including an 80%+ accurate
+        churn prediction model that transformed Customer Success operations from
+        zero visibility to proactive intervention. Expert in building
+        end-to-end data pipelines from ingestion through transformation to ML
+        deployment and visualization.
       </p>
       <div className="grid gap-6">
         {SKILLS.map((skill) => (
