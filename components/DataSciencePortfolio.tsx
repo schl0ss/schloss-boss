@@ -5,6 +5,7 @@ const PORTFOLIO_ITEMS = [
     title:
       "Using Natural Language Processing Techniques to Classify Instances of Bullying in Kids' Text Conversations",
     url: "https://drive.google.com/file/d/1_U6eHDzB4FMVnJPEG_GWk19pIkc634Ne/view?usp=share_link",
+    note: "Practicum paper",
   },
   {
     title: "NBA Moneyball: Predicting Player Salary",
