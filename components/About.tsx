@@ -2,17 +2,18 @@ import SectionHeading from "./SectionHeading";
 
 const SKILLS = [
   {
-    category: "Primary Stack",
-    items: "Snowflake, dbt, Tableau, Google Colab, Fivetran",
+    category: "AI Engineering",
+    items:
+      "Claude Code Skills & Plugins (200+ hrs), Prompt Engineering, Agentic Workflows, MCP",
   },
   {
     category: "ML / AI",
     items:
-      "LLMs/NLP, Sentiment Analysis, Predictive Modeling, Prompt Engineering",
+      "LLMs/NLP, Sentiment Analysis, Predictive Modeling, Snowflake Cortex",
   },
   {
-    category: "AI Tools",
-    items: "Claude Code (200+ hours), Google Gemini, Cursor",
+    category: "Primary Stack",
+    items: "Snowflake, dbt, Tableau, Google Colab, Fivetran",
   },
   {
     category: "Languages",
@@ -26,10 +27,6 @@ const SKILLS = [
     category: "Infrastructure",
     items: "Vercel, Firebase, GitHub Actions, CI/CD",
   },
-  {
-    category: "Other",
-    items: "Jira, Salesforce, GitHub, Google Workspace",
-  },
 ];
 
 export default function About() {
@@ -40,11 +37,12 @@ export default function About() {
     >
       <SectionHeading>About</SectionHeading>
       <p className="text-[var(--color-text-secondary)] leading-relaxed mb-10 max-w-2xl">
-        Proven track record delivering ML solutions including an 80%+ accurate
-        churn prediction model that transformed Customer Success operations from
-        zero visibility to proactive intervention. Expert in building
-        end-to-end data pipelines from ingestion through transformation to ML
-        deployment and visualization.
+        My path from AP math teacher to ML engineer taught me how to break down
+        complex problems and communicate them clearly. At ExtraHop, I built
+        predictive models and NLP pipelines with Snowflake Cortex. Now
+        I&apos;m pushing into AI-accelerated development &mdash; building custom
+        Claude Code skills and plugins, shipping agentic workflows, and using AI
+        tooling to deliver what used to take entire teams.
       </p>
       <div className="grid gap-6">
         {SKILLS.map((skill) => (

@@ -2,8 +2,9 @@ import SectionHeading from "./SectionHeading";
 import { LINKS } from "@/lib/constants";
 
 const CONTACT_LINKS = [
+  { label: "maschlosser@me.com", href: "mailto:maschlosser@me.com" },
   { label: "LinkedIn", href: LINKS.linkedin },
-  { label: "GitHub", href: LINKS.github },
+  { label: "Resume (PDF)", href: LINKS.resume },
 ];
 
 export default function Contact() {

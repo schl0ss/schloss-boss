@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
+import Testimonial from "@/components/Testimonial";
 import Education from "@/components/Education";
 import Projects from "@/components/Projects";
 import DataSciencePortfolio from "@/components/DataSciencePortfolio";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Testimonial />
         <Education />
         <Projects />
         <DataSciencePortfolio />
