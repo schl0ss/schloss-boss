@@ -161,6 +161,16 @@ export default function APStatsSkillPost() {
         better as I feed it more of my resources. Thirteen years of notes,
         finally in a format that scales.
       </p>
+      <p>
+        The skill is open source:{" "}
+        <a
+          href="https://github.com/schl0ss/claude-skill-apstats"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github.com/schl0ss/claude-skill-apstats
+        </a>
+      </p>
     </article>
   );
 }
