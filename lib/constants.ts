@@ -19,6 +19,7 @@ export const NAV_ITEMS = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },
+  { label: "Writing", href: "#writing" },
   { label: "Projects", href: "#projects" },
   { label: "Data Science", href: "#data-science" },
   { label: "Contact", href: "#contact" },

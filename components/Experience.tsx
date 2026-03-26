@@ -5,7 +5,7 @@ const EXPERIENCE = [
     company: "ExtraHop",
     location: "Remote",
     title: "Business Intelligence & ML Engineer II",
-    dates: "Sep 2025 – Feb 2026",
+    dates: "Sep 2025 – Feb 2026 (RIF)",
     highlights: [
       "Engineered customer churn prediction model achieving 80%+ accuracy, transforming Customer Success from reactive to proactive",
       "Implemented sentiment analysis pipeline using Snowflake Cortex for support ticket classification and summarization",

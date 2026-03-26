@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Testimonial from "@/components/Testimonial";
 import Education from "@/components/Education";
+import Writing from "@/components/Writing";
 import Projects from "@/components/Projects";
 import DataSciencePortfolio from "@/components/DataSciencePortfolio";
 import Contact from "@/components/Contact";
@@ -19,6 +20,7 @@ export default function Home() {
         <Experience />
         <Testimonial />
         <Education />
+        <Writing />
         <Projects />
         <DataSciencePortfolio />
         <Contact />
