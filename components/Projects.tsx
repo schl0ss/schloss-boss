@@ -7,13 +7,13 @@ const PROJECTS = [
     url: LINKS.mooringSocial,
     description:
       "Anti-algorithm social platform built solo with Claude Code. Next.js, Firebase, real-time feeds \u2014 no recommendation engine, no engagement tricks.",
-    status: "In Progress",
+    status: "Active",
   },
   {
     name: "Spike Squad",
     description:
       "Real-time volleyball stat tracker. Built in a weekend using Claude Code agentic workflows.",
-    status: "Shipped",
+    status: "Active",
   },
 ];
 
