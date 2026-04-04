@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg)]/90 backdrop-blur-sm">
-      <nav className="max-w-3xl mx-auto px-6 md:px-8 py-4 flex items-center justify-between">
+      <nav className="max-w-5xl mx-auto px-6 md:px-8 py-4 flex items-center justify-between">
         <a
           href="#"
           className="font-mono text-sm font-bold tracking-widest text-[var(--color-accent)]"

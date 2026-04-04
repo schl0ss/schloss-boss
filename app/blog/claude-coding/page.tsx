@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "What I've Learned from 200+ Hours of Claude Code | SCHLOSS-BOSS",
+    "What I've Learned from 200+ Hours of Claude Code | SCHLOSS BOSS AI",
   description:
     "Skills, plugins, agentic workflows, and MCP — how Claude Code changed the way I build software.",
 };

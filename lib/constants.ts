@@ -1,10 +1,10 @@
 export const SITE = {
-  name: "SCHLOSS-BOSS",
+  name: "SCHLOSS BOSS AI",
   tagline: "AI FOR GOOD",
   fullName: "Matt Schlosser",
   url: "https://schloss-boss.ai",
   description:
-    "ML engineer and AI builder with a Georgia Tech MS in Analytics. I ship full-stack products solo using Claude Code and agentic workflows \u2014 from churn prediction models to sentiment analysis pipelines to entire social platforms built from scratch.",
+    "Cutting Edge AI, Machine Learning, Data ETL, and SaaS Development. I leverage Agentic AI to 30x productivity while remaining grounded by a rock solid background in Python coding, AI/ML analytics, and business from my Georgia Tech MS in Analytics (4.0 GPA) and real world experience. Over 300 hours of AI-accelerated development experience primarily working with Claude Code.",
 } as const;
 
 export const LINKS = {

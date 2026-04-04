@@ -1,4 +1,8 @@
 import { SITE } from "@/lib/constants";
+import TextScramble from "./TextScramble";
+import LineFadeIn from "./LineFadeIn";
+
+const SUBTITLE = `${SITE.fullName} | Frisco, TX`;
 
 export default function Hero() {
   return (
@@ -6,15 +10,23 @@ export default function Hero() {
       <p className="font-mono text-sm tracking-[0.3em] text-[var(--color-accent)] mb-4">
         {SITE.tagline}
       </p>
-      <h1 className="font-bold text-[var(--color-text-primary)] font-mono">
-        {SITE.name}
-      </h1>
-      <p className="mt-6 text-lg md:text-xl leading-relaxed text-[var(--color-text-secondary)] max-w-2xl">
-        {SITE.description}
-      </p>
-      <p className="mt-4 text-sm text-[var(--color-text-muted)] font-mono">
-        {SITE.fullName}
-      </p>
+      <TextScramble
+        text={SITE.name}
+        duration={3000}
+        as="h1"
+        className="font-bold text-[var(--color-text-primary)] font-mono"
+      />
+      <TextScramble
+        text={SUBTITLE}
+        duration={3000}
+        as="p"
+        className="mt-2 text-sm font-mono text-[var(--color-text-muted)] tracking-widest"
+      />
+      <LineFadeIn
+        text={SITE.description}
+        stagger={400}
+        className="mt-6 text-lg md:text-xl leading-relaxed text-[var(--color-text-secondary)] max-w-2xl"
+      />
     </section>
   );
 }

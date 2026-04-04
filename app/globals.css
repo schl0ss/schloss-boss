@@ -64,6 +64,8 @@ h2 {
   margin-bottom: 1.25rem;
   line-height: 1.75;
   color: var(--color-text-secondary);
+  text-align: justify;
+  text-align-last: left;
 }
 
 .prose ul,

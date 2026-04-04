@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Building a Churn Prediction Model from Zero | SCHLOSS-BOSS",
+  title: "Building a Churn Prediction Model from Zero | SCHLOSS BOSS AI",
   description:
     "How I built an end-to-end churn prediction system — from zero predictive capability to a deployed Gradient Boosting model with 0.92 AUC.",
 };

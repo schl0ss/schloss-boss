@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Teaching AP Stats with an AI Copilot | SCHLOSS-BOSS",
+    "Teaching AP Stats with an AI Copilot | SCHLOSS BOSS AI",
   description:
     "How I turned 13 years of AP Statistics teaching notes into a Claude Code skill that walks through inference problems using the 4C Method.",
 };
