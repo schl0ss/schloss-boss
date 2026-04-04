@@ -1,16 +1,28 @@
 import SectionHeading from "./SectionHeading";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const EXPERIENCE = [
+  {
+    company: "Schloss Boss AI",
+    location: "Frisco, TX",
+    title: "Founder",
+    dates: "Apr 2026 – Present",
+    highlights: [
+      "AI consulting, data engineering, and SaaS development using Claude Code and agentic workflows to deliver full projects as a solo engineer",
+      "Built and deployed a complete SaaS application (FastAPI, React, PostgreSQL) with fuzzy employer deduplication and automated job ingestion pipeline",
+      "Ship production ML models, ETL pipelines, and full-stack applications end-to-end for clients",
+    ],
+  },
   {
     company: "ExtraHop",
     location: "Remote",
     title: "Business Intelligence & ML Engineer II",
     dates: "Sep 2025 – Feb 2026 (RIF)",
     highlights: [
-      "Engineered customer churn prediction model achieving 80%+ accuracy, transforming Customer Success from reactive to proactive",
+      "Engineered customer churn prediction model (0.92 AUC, Gradient Boosting) deployed in a Tableau dashboard used daily by Customer Success for over a year",
+      "Tested 5 model types (Logistic Regression, Random Forest, Gradient Boosting, XGBoost, LightGBM) with rigorous cross-validation and class weighting",
       "Implemented sentiment analysis pipeline using Snowflake Cortex for support ticket classification and summarization",
-      "Designed scalable data pipelines using dbt to transform raw data into actionable business insights",
-      "Architected end-to-end ML pipelines from data ingestion through model deployment",
+      "Built end-to-end ML pipelines: Snowflake data assembly, Python/sklearn modeling, Tableau delivery with prescriptive actions per account",
     ],
   },
   {
@@ -21,17 +33,17 @@ const EXPERIENCE = [
     highlights: [
       "Built executive dashboards in Tableau including \"Support Performance\" and \"Channel Partner Performance\"",
       "Led ML/AI projects using Snowflake Cortex and custom Python solutions",
-      "Orchestrated data pipeline ensuring data integrity for mission-critical KPIs",
+      "Designed data pipelines with dbt and Fivetran ensuring data integrity for mission-critical KPIs",
     ],
   },
   {
     company: "Pinwheel",
     location: "Remote",
-    title: "Practicum Intern",
+    title: "Georgia Tech Practicum Internship",
     dates: "Dec 2022 – Apr 2023",
     highlights: [
-      "Developed NLP models to classify instances of bullying in unstructured text conversations",
-      "Applied neural network techniques using Python (PyTorch) and Hugging Face on large-scale text data",
+      "Built NLP models from scratch using XLM-RoBERTa to classify instances of bullying in unstructured text conversations",
+      "Applied transformer and neural network techniques using Python (PyTorch) and Hugging Face on large-scale text data",
     ],
   },
   {
@@ -41,7 +53,7 @@ const EXPERIENCE = [
     dates: "2012 – 2023",
     highlights: [
       "Chaired mathematics department of 20+ teachers, overseeing curriculum development and strategic planning",
-      "Taught 1,000+ AP Calculus BC and AP Statistics students",
+      "Helped 1,000+ AP Calculus BC and AP Statistics students earn college credit",
     ],
   },
 ];
@@ -55,7 +67,7 @@ export default function Experience() {
       <SectionHeading>Experience</SectionHeading>
       <div className="grid gap-10">
         {EXPERIENCE.map((job, i) => (
-          <div key={i}>
+          <ScrollFadeIn key={i} stagger={150}>
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
               <div>
                 <span className="font-mono text-[var(--color-text-primary)]">
@@ -80,7 +92,7 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </div>
+          </ScrollFadeIn>
         ))}
       </div>
     </section>

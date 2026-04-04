@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Building a Churn Prediction Model from Zero | SCHLOSS BOSS AI",
   description:
-    "How I built an end-to-end churn prediction system — from zero predictive capability to a deployed Gradient Boosting model with 0.92 AUC.",
+    "How I built an end-to-end churn prediction system, going from zero predictive capability to a deployed Gradient Boosting model with 0.92 AUC.",
 };
 
 export default function ChurnModelPost() {
@@ -24,18 +24,17 @@ export default function ChurnModelPost() {
 
       <h2>The Problem</h2>
       <p>
-        I was working at a PE-backed SaaS company where the Customer Success
-        team had <strong>zero predictive capability</strong>. CS reps were
-        completely reactive. By the time they knew a customer was at risk of
-        not renewing, it was too late to intervene. There was no prior
-        predictive infrastructure in place.
+        The Customer Success team had <strong>zero predictive
+        capability</strong>. None. CS reps were entirely reactive, learning
+        a customer was at risk only after it was too late to do anything
+        about it. No models, no scores, no early warning system of any
+        kind.
       </p>
       <p>
-        Under private equity ownership, ARR (Annual Recurring Revenue) is the
-        primary success metric. Every churned customer is a direct hit to ARR,
-        which drives valuation multiples. This wasn&apos;t just a data science
-        project — it was directly protecting the metric that determines
-        enterprise value.
+        Under private equity ownership, ARR is the metric that drives
+        valuation multiples. Every churned customer is a direct hit. This
+        was not a data science experiment. It was protecting the number
+        that determines what the company is worth.
       </p>
 
       <h2>The Data Pipeline</h2>
@@ -58,12 +57,11 @@ export default function ChurnModelPost() {
         customer health score by date using a ranked join.
       </p>
       <p>
-        The feature engineering wasn&apos;t just about capturing a single
-        health score — it was about structuring the same metric at different
-        lead times. This let me answer not just &quot;can we predict
-        churn&quot; but <strong>&quot;how far in advance can we predict
-        it&quot;</strong> — which is the question the business actually cared
-        about.
+        The interesting part was not capturing a single health score. It
+        was structuring the same metric at different lead times, letting
+        me answer not just &quot;can we predict churn&quot; but{" "}
+        <strong>&quot;how far in advance?&quot;</strong> That second
+        question is the one the business actually cares about.
       </p>
 
       <h2>Model Selection</h2>
@@ -85,20 +83,18 @@ export default function ChurnModelPost() {
 
       <h3>Why Not Just Accuracy?</h3>
       <p>
-        Accuracy is misleading with imbalanced classes. If 90% of customers
-        don&apos;t churn, a model that always predicts &quot;no churn&quot;
-        gets 90% accuracy but is completely useless.
-      </p>
-      <p>
-        I evaluated on two metrics:
+        Accuracy lies when classes are imbalanced. If 90% of customers
+        renew, a model that always predicts &quot;no churn&quot; scores
+        90% accuracy while being completely useless. So I evaluated on
+        two metrics that actually matter:
       </p>
       <ul>
         <li>
-          <strong>AUC</strong> — discrimination. Can the model rank high-risk
+          <strong>AUC</strong> (discrimination): Can the model rank high-risk
           customers above low-risk ones?
         </li>
         <li>
-          <strong>Brier score</strong> — calibration. When the model says 40%
+          <strong>Brier score</strong> (calibration): When the model says 40%
           churn probability, do roughly 40% actually churn?
         </li>
       </ul>
@@ -154,18 +150,18 @@ export default function ChurnModelPost() {
 
       <h3>Key Decisions</h3>
       <p>
-        <strong>Gradient Boosting won short-term</strong> — it handled the
+        <strong>Gradient Boosting won short-term</strong>, handling the
         non-linear relationship between health scores and churn better than
         Logistic Regression, consistently outperforming on both AUC and Brier
         score where there was sufficient training data.
       </p>
       <p>
-        <strong>Logistic Regression won at 3 months</strong> — Gradient
+        <strong>Logistic Regression won at 3 months</strong> because Gradient
         Boosting was overfitting on the smaller sample size. I chose the right
         model for each use case, not a one-size-fits-all approach.
       </p>
       <p>
-        <strong>I refused to deploy 6/12-month models</strong> — with only 36
+        <strong>I refused to deploy 6/12-month models.</strong> With only 36
         samples and 6 churns at the 6-month window, I recommended not
         deploying despite organizational appetite for longer-range prediction.
         I set a threshold of 150&ndash;200 samples with 30&ndash;40 churns
@@ -175,11 +171,11 @@ export default function ChurnModelPost() {
 
       <h2>Deployment</h2>
       <p>
-        The output was surfaced in a <strong>Tableau dashboard</strong> with
-        risk tiers and recommended actions. It went all the way to
-        prescriptive — specific accounts with recommended next actions for the
-        CS team. This wasn&apos;t a model that sat in a notebook. It was a
-        tool the CS team used daily for over a year.
+        The output lived in a <strong>Tableau dashboard</strong> with risk
+        tiers and recommended actions. Not descriptive. Not diagnostic.
+        Prescriptive: specific accounts, specific next steps, updated
+        daily. The CS team used it every morning for over a year. This
+        was not a model gathering dust in a notebook.
       </p>
       <blockquote>
         <p>
@@ -208,14 +204,14 @@ export default function ChurnModelPost() {
       <h2>Stack</h2>
       <p>
         <strong>Snowflake</strong> (data assembly) &rarr;{" "}
-        <strong>Python</strong> (modeling — sklearn, GridSearchCV) &rarr;{" "}
+        <strong>Python</strong> (modeling: sklearn, GridSearchCV) &rarr;{" "}
         <strong>Tableau</strong> (visualization and delivery)
       </p>
       <p>
-        End-to-end: I built the SQL for data assembly, the Python for
-        modeling, and the Tableau dashboard for delivery. From zero predictive
+        I built every layer: the SQL for data assembly, the Python for
+        modeling, the Tableau dashboard for delivery. Zero predictive
         capability to prescriptive analytics with recommended actions per
-        account.
+        account, end to end.
       </p>
     </article>
   );

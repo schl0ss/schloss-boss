@@ -19,14 +19,17 @@ export default function Contact() {
       </p>
       <ul className="flex flex-col gap-3">
         {CONTACT_LINKS.map((link) => (
-          <li key={link.label}>
+          <li key={link.label} className="flex items-baseline gap-3">
+            <span className="text-xs font-mono text-[var(--color-accent)] border border-[var(--color-accent-dim)] px-2 py-0.5 rounded">
+              Connect
+            </span>
             <a
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-sm text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors duration-200"
             >
-              {link.label} &rarr;
+              {link.label}
             </a>
           </li>
         ))}

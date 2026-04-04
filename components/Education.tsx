@@ -1,4 +1,5 @@
 import SectionHeading from "./SectionHeading";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const EDUCATION = [
   {
@@ -6,8 +7,11 @@ const EDUCATION = [
     degree: "Master of Science in Analytics",
     year: "2023",
     gpa: "4.0",
-    details:
-      "Top-5 nationally ranked program. Graduate-level courses across Computing, Engineering, and Business in ML/AI, statistical modeling, data pipelines, visualization, and optimization.",
+    details: [
+      "Top-5 nationally ranked interdisciplinary program spanning Computing, Engineering, and Business. The program is called Analytics, not Data Science, because the craft goes beyond precision. Analytics is the art of turning data into decisions that move people and organizations.",
+      "Every model was built from the ground up. No black boxes. We learned the mathematics, wrote the code, and understood why it worked before we ever touched a library. That foundation proved instrumental during my practicum, where I implemented neural networks and attention mechanisms to build NLP models from scratch.",
+      "Graduate-level coursework in ML/AI, statistical modeling, NLP, data pipelines, visualization, and optimization.",
+    ],
   },
   {
     school: "SMU",
@@ -23,7 +27,7 @@ export default function Education() {
       className="py-16 md:py-20 border-t border-[var(--color-border)]"
     >
       <SectionHeading>Education</SectionHeading>
-      <div className="grid gap-8">
+      <ScrollFadeIn stagger={200} delay={1000} className="grid gap-8">
         {EDUCATION.map((edu) => (
           <div key={edu.school}>
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
@@ -45,14 +49,17 @@ export default function Education() {
                 {edu.year}
               </span>
             </div>
-            {edu.details && (
-              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mt-2">
-                {edu.details}
+            {edu.details?.map((paragraph, i) => (
+              <p
+                key={i}
+                className="text-sm text-[var(--color-text-secondary)] leading-relaxed mt-2"
+              >
+                {paragraph}
               </p>
-            )}
+            ))}
           </div>
         ))}
-      </div>
+      </ScrollFadeIn>
     </section>
   );
 }

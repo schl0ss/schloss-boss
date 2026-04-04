@@ -43,6 +43,12 @@ h2 {
   letter-spacing: -0.02em;
 }
 
+/* Homepage text justify */
+main > section p {
+  text-align: justify;
+  text-align-last: left;
+}
+
 /* Blog prose styles */
 .prose h2 {
   font-size: 1.5rem;

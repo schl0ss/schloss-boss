@@ -1,4 +1,5 @@
 import SectionHeading from "./SectionHeading";
+import ScrollFadeIn from "./ScrollFadeIn";
 import { LINKS } from "@/lib/constants";
 
 const PROJECTS = [
@@ -34,10 +35,13 @@ export default function Projects() {
           GitHub &rarr;
         </a>
       </div>
-      <div className="grid gap-8">
+      <ScrollFadeIn stagger={200} delay={1000} className="grid gap-8">
         {PROJECTS.map((project) => (
           <div key={project.name}>
             <div className="flex items-baseline gap-3 mb-2">
+              <span className="text-xs font-mono text-[var(--color-accent)] border border-[var(--color-accent-dim)] px-2 py-0.5 rounded">
+                {project.status}
+              </span>
               {project.url ? (
                 <a
                   href={project.url}
@@ -45,23 +49,20 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="font-mono text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors duration-200"
                 >
-                  {project.name} &rarr;
+                  {project.name}
                 </a>
               ) : (
                 <span className="font-mono text-[var(--color-text-primary)]">
                   {project.name}
                 </span>
               )}
-              <span className="text-xs font-mono text-[var(--color-accent)] border border-[var(--color-accent-dim)] px-2 py-0.5 rounded">
-                {project.status}
-              </span>
             </div>
             <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
               {project.description}
             </p>
           </div>
         ))}
-      </div>
+      </ScrollFadeIn>
     </section>
   );
 }

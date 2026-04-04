@@ -1,11 +1,15 @@
+import ScrollScramble from "./ScrollScramble";
+
 export default function SectionHeading({
   children,
 }: {
-  children: React.ReactNode;
+  children: string;
 }) {
   return (
-    <h2 className="font-bold text-[var(--color-text-primary)] mb-6">
-      {children}
-    </h2>
+    <ScrollScramble
+      text={children}
+      duration={1000}
+      className="font-bold text-[var(--color-text-primary)] mb-6"
+    />
   );
 }
