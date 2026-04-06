@@ -4,7 +4,7 @@ export const SITE = {
   fullName: "Matt Schlosser",
   url: "https://schloss-boss.ai",
   description:
-    "One engineer. Full orchestra. I use AI to ship what used to take a team: production ML models, data pipelines, and complete SaaS applications, delivered end-to-end by a single operator with 300+ hours of AI-accelerated development.",
+    "One engineer. Full orchestra. I write custom skills and agentic workflows in Claude Code, shipping production ML models, data pipelines, and full SaaS applications as a solo operator. This is not chatbot prompting. The tools change every week, and I ship with them every day.",
 } as const;
 
 export const LINKS = {
