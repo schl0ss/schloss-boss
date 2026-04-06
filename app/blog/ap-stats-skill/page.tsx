@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Teaching AP Stats with an AI Copilot | SCHLOSS BOSS AI",
+    "How I Turned 13 Years of Teaching High School AP Stats into a Claude Code Skill | SCHLOSS BOSS AI",
   description:
-    "How I turned 13 years of AP Statistics teaching notes into a Claude Code skill that walks through inference problems using the 4C Method.",
+    "How I turned 13 years of AP® Statistics teaching notes into a Claude Code skill that walks through basic statistical inference problems using the 4C Method.",
 };
 
 export default function APStatsSkillPost() {
@@ -15,13 +15,20 @@ export default function APStatsSkillPost() {
           March 2026
         </time>
         <h1 className="!text-3xl md:!text-4xl font-bold text-[var(--color-text-primary)] !leading-tight !tracking-tight mb-4">
-          Teaching AP Stats with an AI Copilot
+          How I Turned 13 Years of Teaching High School AP Stats into a Claude Code Skill
         </h1>
         <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
-          How I turned 13 years of AP Statistics teaching notes into a Claude
-          Code skill that walks through inference problems using the 4C Method.
+          How I turned 13 years of AP® Statistics teaching notes into a Claude
+          Code skill that walks through basic statistical inference problems
+          using the 4C Method.
         </p>
       </header>
+
+      <p className="text-xs text-[var(--color-text-muted)]">
+        AP® is a registered trademark of the College Board, which was not
+        involved in the production of, and does not endorse, this skill or
+        this post.
+      </p>
 
       <h2>The Problem</h2>
       <p>
@@ -33,20 +40,21 @@ export default function APStatsSkillPost() {
       </p>
       <p>
         The problem is where all that knowledge lives: in PDFs, in
-        handwritten notes, in my head. Ask a generic AI to solve an AP
-        Stats problem and you get a textbook answer. It does not know the
+        handwritten notes, in my head. Ask a generic AI to solve a stats
+        inference problem and you get a textbook answer. It does not know the
         4C Method. It does not know you should always open your conclusion
         with a p-value interpretation. It has no idea which TI-84 command
-        to use or what the AP scoring rubric actually rewards.
+        to use or what the scoring rubric actually rewards.
       </p>
 
       <h2>The Solution: A Claude Code Skill</h2>
       <p>
         Claude Code has a feature called <strong>skills</strong>: markdown
         files that teach the AI domain-specific workflows. I built one
-        called <code>/apstats</code> that encodes how I actually teach
-        inference. Not how a textbook explains it. How I explain it, after
-        thirteen years of watching students get it right and get it wrong.
+        called <code>/stathelp</code> that encodes how I actually teach
+        basic statistical inference. Not how a textbook explains it. How I
+        explain it, after thirteen years of watching students get it right
+        and get it wrong.
       </p>
       <p>
         The process was straightforward. I fed Claude my original teaching
@@ -68,12 +76,12 @@ export default function APStatsSkillPost() {
         </li>
         <li>
           A <strong>TI-84 calculator reference</strong> I wrote covering every
-          function students need on the AP exam
+          function students need on the exam
         </li>
         <li>
           My notes on <strong>p-value interpretation</strong> as a teaching
           priority, emphasizing that students should always interpret the p-value
-          in their conclusion, even though the AP exam doesn&apos;t require it
+          in their conclusion, even though the exam does not require it
           for full credit
         </li>
         <li>
@@ -92,7 +100,7 @@ export default function APStatsSkillPost() {
 
       <h2>What It Actually Does</h2>
       <p>
-        When I type <code>/apstats</code> and give it a problem, the skill
+        When I type <code>/stathelp</code> and give it a problem, the skill
         kicks in and Claude walks through it the way I would teach it:
       </p>
       <ol>
@@ -126,11 +134,11 @@ export default function APStatsSkillPost() {
         about statistics instead of parameters.
       </p>
 
-      <h2>Grading Itself Against the AP Rubric</h2>
+      <h2>Grading Itself Against the Rubric</h2>
       <p>
-        I gave it a real AP exam free response question: the 2019 FRQ #4
+        I gave it a real free response question: the 2019 FRQ #4
         about kochia plants and glyphosate resistance. Then I fed it the
-        official College Board scoring guidelines and asked it to grade
+        official scoring guidelines and asked it to grade
         its own work.
       </p>
       <p>
@@ -166,18 +174,18 @@ export default function APStatsSkillPost() {
       </p>
       <p>
         The whole process took one conversation. Raw PDFs in, working
-        skill out, good enough to pass an AP exam rubric. The skill keeps
+        skill out, good enough to pass an exam rubric. The skill keeps
         getting better as I feed it more resources. Thirteen years of
         notes, finally in a format that scales.
       </p>
       <p>
         The skill is open source:{" "}
         <a
-          href="https://github.com/schl0ss/claude-skill-apstats"
+          href="https://github.com/schl0ss/claude-skill-stathelp"
           target="_blank"
           rel="noopener noreferrer"
         >
-          github.com/schl0ss/claude-skill-apstats
+          github.com/schl0ss/claude-skill-stathelp
         </a>
       </p>
     </article>

@@ -17,11 +17,11 @@ const POSTS = [
       "Skills, plugins, agentic workflows, and MCP, exploring how a CLI-based AI coding assistant changed the way I build software.",
   },
   {
-    title: "Teaching AP Stats with an AI Copilot",
+    title: "How I Turned 13 Years of Teaching High School AP Stats into a Claude Code Skill",
     slug: "/blog/ap-stats-skill",
     date: "Mar 2026",
     description:
-      "How I turned 13 years of AP Statistics teaching notes into a Claude Code skill that walks through inference problems using the 4C Method.",
+      "Thirteen years of teaching notes, inference frameworks, and scoring rubric patterns encoded into a single Claude Code skill for basic statistical inference.",
   },
   {
     title: "Building a Churn Prediction Model from Zero",
