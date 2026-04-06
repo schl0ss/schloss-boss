@@ -14,15 +14,19 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="max-w-3xl mx-auto px-6 md:px-8">
+      <main id="main-content" className="max-w-3xl mx-auto px-6 md:px-8 lg:px-0">
         <Hero />
         <About />
-        <Experience />
+        <section id="work">
+          <Experience />
+          <Projects />
+        </section>
         <Testimonial />
-        <Education />
         <Writing />
-        <Projects />
-        <DataSciencePortfolio />
+        <section id="credentials">
+          <Education />
+          <DataSciencePortfolio />
+        </section>
         <Contact />
       </main>
       <Footer />

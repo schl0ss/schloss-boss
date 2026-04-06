@@ -21,7 +21,6 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <section
-      id="projects"
       className="py-16 md:py-20 border-t border-[var(--color-border)]"
     >
       <div className="flex items-baseline justify-between mb-6 [&>h2]:mb-0">
@@ -30,7 +29,7 @@ export default function Projects() {
           href={LINKS.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors duration-200"
+          className="font-mono text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] focus-visible:text-[var(--color-accent)] focus-visible:outline-none transition-colors duration-200"
         >
           GitHub &rarr;
         </a>
@@ -47,7 +46,7 @@ export default function Projects() {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors duration-200"
+                  className="font-mono text-[var(--color-text-primary)] hover:text-[var(--color-accent)] focus-visible:text-[var(--color-accent)] focus-visible:outline-none transition-colors duration-200"
                 >
                   {project.name}
                 </a>

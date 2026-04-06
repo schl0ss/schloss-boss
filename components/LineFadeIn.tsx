@@ -48,18 +48,31 @@ export default function LineFadeIn({ text, stagger = 400, className }: Props) {
     const el = containerRef.current;
     if (!el) return;
 
+    let resizeTimer: ReturnType<typeof setTimeout>;
     const observer = new ResizeObserver(() => {
-      hasAnimated.current = false;
-      setVisibleCount(0);
-      measure();
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        hasAnimated.current = false;
+        setVisibleCount(0);
+        measure();
+      }, 150);
     });
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      clearTimeout(resizeTimer);
+    };
   }, [measure]);
 
   useEffect(() => {
     if (!lines || lines.length === 0 || hasAnimated.current) return;
     hasAnimated.current = true;
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      setVisibleCount(lines.length);
+      return;
+    }
 
     let i = 0;
     const timer = setInterval(() => {

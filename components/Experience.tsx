@@ -61,7 +61,6 @@ const EXPERIENCE = [
 export default function Experience() {
   return (
     <section
-      id="experience"
       className="py-16 md:py-20 border-t border-[var(--color-border)]"
     >
       <SectionHeading>Experience</SectionHeading>
@@ -78,7 +77,7 @@ export default function Experience() {
                   · {job.company}
                 </span>
               </div>
-              <span className="font-mono text-xs text-[var(--color-text-muted)] shrink-0">
+              <span className="font-mono text-xs text-[var(--color-accent-warm)] shrink-0">
                 {job.dates}
               </span>
             </div>

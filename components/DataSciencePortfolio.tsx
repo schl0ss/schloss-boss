@@ -29,7 +29,6 @@ const PORTFOLIO_ITEMS = [
 export default function DataSciencePortfolio() {
   return (
     <section
-      id="data-science"
       className="py-16 md:py-20 border-t border-[var(--color-border)]"
     >
       <SectionHeading>Georgia Tech Project Portfolio</SectionHeading>
@@ -41,7 +40,7 @@ export default function DataSciencePortfolio() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-sm text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors duration-200"
+                className="font-mono text-sm text-[var(--color-text-primary)] hover:text-[var(--color-accent)] focus-visible:text-[var(--color-accent)] focus-visible:outline-none transition-colors duration-200"
               >
                 {item.title}
                 {item.note && (

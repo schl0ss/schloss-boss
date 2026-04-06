@@ -11,9 +11,9 @@ export default function ClaudeCodingPost() {
   return (
     <article className="prose">
       <header className="mb-12">
-        <p className="font-mono text-sm text-[var(--color-text-muted)] mb-2">
-          2026
-        </p>
+        <time dateTime="2026-04" className="block font-mono text-sm text-[var(--color-accent-warm)] mb-2">
+          April 2026
+        </time>
         <h1 className="!text-3xl md:!text-4xl font-bold text-[var(--color-text-primary)] !leading-tight !tracking-tight mb-4">
           What I&apos;ve Learned from 300+ Hours of Claude Code
         </h1>

@@ -19,6 +19,9 @@ export default function HeroAnimation({ text }: { text: string }) {
     if (hasAnimated.current) return;
     hasAnimated.current = true;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
     const chars = text.split("");
     const resolved = new Array(chars.length).fill(false);
     const current = chars.map((c) => (c === " " ? " " : randomChar()));

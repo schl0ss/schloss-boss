@@ -30,6 +30,9 @@ export default function TextScramble({
     if (hasAnimated.current) return;
     hasAnimated.current = true;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
     const chars = text.split("");
     const nonSpaceCount = chars.filter((c) => c !== " ").length;
     const staggerDelay = duration / nonSpaceCount;

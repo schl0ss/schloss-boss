@@ -11,9 +11,9 @@ export default function ConductorPost() {
   return (
     <article className="prose">
       <header className="mb-12">
-        <p className="font-mono text-sm text-[var(--color-text-muted)] mb-2">
-          2026
-        </p>
+        <time dateTime="2026-04" className="block font-mono text-sm text-[var(--color-accent-warm)] mb-2">
+          April 2026
+        </time>
         <h1 className="!text-3xl md:!text-4xl font-bold text-[var(--color-text-primary)] !leading-tight !tracking-tight mb-4">
           From Violinist to Conductor: The New Software Engineer
         </h1>
@@ -31,6 +31,7 @@ export default function ConductorPost() {
           height="356"
           src="https://www.youtube.com/embed/bhhFQ9DiCtg"
           title="Orchestra conductor"
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           className="rounded-lg border border-[var(--color-border)]"

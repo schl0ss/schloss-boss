@@ -28,11 +28,13 @@ export default function ScrollScramble({
     const el = ref.current;
     if (!el) return;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
-          runScramble();
+          if (!prefersReducedMotion) runScramble();
         }
       },
       { threshold: 0.5 }

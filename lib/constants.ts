@@ -4,7 +4,7 @@ export const SITE = {
   fullName: "Matt Schlosser",
   url: "https://schloss-boss.ai",
   description:
-    "Cutting Edge AI, Machine Learning, Data ETL & Visualizations, and SaaS Development. I leverage Agentic AI to 30x productivity while remaining grounded by a rock solid background in Python, AI/ML analytics, and business from my Georgia Tech MS in Analytics (4.0 GPA) and real world experience. Over 300 hours of AI-accelerated development experience primarily working with Claude Code.",
+    "One engineer. Full orchestra. I use AI to ship what used to take a team: production ML models, data pipelines, and complete SaaS applications, delivered end-to-end by a single operator with 300+ hours of AI-accelerated development.",
 } as const;
 
 export const LINKS = {
@@ -17,10 +17,8 @@ export const LINKS = {
 
 export const NAV_ITEMS = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
+  { label: "Work", href: "#work" },
   { label: "Writing", href: "#writing" },
-  { label: "Projects", href: "#projects" },
-  { label: "Data Science", href: "#data-science" },
+  { label: "Credentials", href: "#credentials" },
   { label: "Contact", href: "#contact" },
 ] as const;

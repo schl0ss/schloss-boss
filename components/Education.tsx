@@ -23,7 +23,6 @@ const EDUCATION = [
 export default function Education() {
   return (
     <section
-      id="education"
       className="py-16 md:py-20 border-t border-[var(--color-border)]"
     >
       <SectionHeading>Education</SectionHeading>
@@ -45,7 +44,7 @@ export default function Education() {
                   </span>
                 )}
               </div>
-              <span className="font-mono text-xs text-[var(--color-text-muted)] shrink-0">
+              <span className="font-mono text-xs text-[var(--color-accent-warm)] shrink-0">
                 {edu.year}
               </span>
             </div>

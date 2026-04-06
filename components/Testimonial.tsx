@@ -2,10 +2,10 @@ import ScrollFadeIn from "./ScrollFadeIn";
 
 export default function Testimonial() {
   return (
-    <section className="py-12 md:py-16 border-t border-[var(--color-border)]">
+    <section className="py-16 md:py-24 border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] -mx-6 md:-mx-8 lg:mx-[calc(-50vw+50%)] px-6 md:px-8 lg:px-[calc(50vw-50%)]">
       <ScrollFadeIn>
-        <blockquote className="max-w-2xl">
-          <p className="text-[var(--color-text-secondary)] leading-relaxed italic">
+        <blockquote className="max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed italic">
             &ldquo;Matt was a valuable asset on our data analytics &amp; BI
             engineering team. His knowledge of machine learning modeling, AI,
             SQL, data warehousing &amp; data engineering, as well as data
@@ -14,7 +14,7 @@ export default function Testimonial() {
             to stakeholders of all levels, and working with the rest of the
             team.&rdquo;
           </p>
-          <footer className="mt-4 font-mono text-sm">
+          <footer className="mt-6 font-mono text-sm">
             <span className="text-[var(--color-text-primary)]">
               Ward Williams
             </span>

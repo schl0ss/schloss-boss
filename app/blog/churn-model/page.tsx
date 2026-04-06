@@ -10,9 +10,9 @@ export default function ChurnModelPost() {
   return (
     <article className="prose">
       <header className="mb-12">
-        <p className="font-mono text-sm text-[var(--color-text-muted)] mb-2">
-          2025
-        </p>
+        <time dateTime="2026-03" className="block font-mono text-sm text-[var(--color-accent-warm)] mb-2">
+          March 2026
+        </time>
         <h1 className="!text-3xl md:!text-4xl font-bold text-[var(--color-text-primary)] !leading-tight !tracking-tight mb-4">
           Building a Churn Prediction Model from Zero
         </h1>

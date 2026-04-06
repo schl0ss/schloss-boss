@@ -23,6 +23,12 @@ export default function ScrollFadeIn({
     const el = ref.current;
     if (!el) return;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      setVisible(true);
+      return;
+    }
+
     let timer: ReturnType<typeof setTimeout>;
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -43,7 +49,7 @@ export default function ScrollFadeIn({
       observer.disconnect();
       clearTimeout(timer);
     };
-  }, []);
+  }, [delay]);
 
   return (
     <div ref={ref} className={className}>
