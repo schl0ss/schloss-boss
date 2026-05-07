@@ -5,7 +5,7 @@ const SKILLS = [
   {
     category: "Cutting Edge AI",
     items:
-      "Claude Code Skills & Plugins (300+ hrs), LLMs, Prompt Engineering, Agentic Workflows, MCP",
+      "Claude Code, Codex, agent skills, LLMs, prompt engineering, agentic workflows, MCP",
   },
   {
     category: "SaaS Development",
@@ -37,21 +37,19 @@ export default function About() {
           bleed, master the solo. That era is ending. With the growing
           power of AI, one engineer can step into the conductor&apos;s
           chair and lead the entire orchestra at a blistering pace.
-          That is what I do. With 300+ hours of AI-accelerated development
+          That is what I do. With 400+ hours across Claude Code and Codex
           and a Georgia Tech MS in Analytics, I deliver production ML
           models, full ETL pipelines, and complete SaaS applications. Solo.
         </p>
         <p className="text-[var(--color-text-secondary)] leading-relaxed mb-10 max-w-2xl">
-          Before founding Schloss Boss AI, I taught AP Statistics and BC
-          Calculus for over a decade, chairing the math department and
-          helping more than 1,000 students earn college credit. When I ran
-          out of mountains to climb in education, I went back to school,
-          earning an MS in Analytics from Georgia Tech (4.0 GPA) and
-          getting early hands-on experience with LLMs by building NLP
-          models from scratch during my practicum internship. That
-          foundation launched my engineering career: end-to-end data
-          pipelines, ML prediction models, and executive data
-          visualizations at a cybersecurity SaaS.
+          Before founding Schloss Boss AI, I chaired a high school math
+          department and taught AP Statistics and BC Calculus for over a
+          decade, helping more than 1,000 students earn college credit. I
+          later earned an MS in Analytics from Georgia Tech with a 4.0 GPA,
+          built NLP models from scratch during my practicum internship, and
+          moved into production data and ML engineering: end-to-end
+          pipelines, prediction models, sentiment analysis, and executive
+          data products at a cybersecurity SaaS.
         </p>
       </ScrollFadeIn>
       <ScrollFadeIn stagger={150} delay={1400}>
