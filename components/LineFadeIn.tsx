@@ -43,7 +43,17 @@ export default function LineFadeIn({ text, stagger = 400, className }: Props) {
   }, [text]);
 
   useEffect(() => {
+    let cancelled = false;
+
+    // Measure once now (in case fonts are already loaded, e.g. cached),
+    // then re-measure after webfonts settle so pretext's metrics match
+    // what the browser actually renders.
     measure();
+    if (typeof document !== "undefined" && document.fonts?.ready) {
+      document.fonts.ready.then(() => {
+        if (!cancelled) measure();
+      });
+    }
 
     const el = containerRef.current;
     if (!el) return;
@@ -59,6 +69,7 @@ export default function LineFadeIn({ text, stagger = 400, className }: Props) {
     });
     observer.observe(el);
     return () => {
+      cancelled = true;
       observer.disconnect();
       clearTimeout(resizeTimer);
     };
@@ -87,14 +98,18 @@ export default function LineFadeIn({ text, stagger = 400, className }: Props) {
   // SSR fallback
   if (!lines) {
     return (
-      <p ref={containerRef} className={className} style={{ visibility: "hidden" }}>
+      <p
+        ref={containerRef}
+        className={className}
+        style={{ visibility: "hidden", textAlign: "left" }}
+      >
         {text}
       </p>
     );
   }
 
   return (
-    <p ref={containerRef} className={className}>
+    <p ref={containerRef} className={className} style={{ textAlign: "left" }}>
       {lines.map((line, i) => (
         <span
           key={i}
